@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-secondary-container": "#852327",
+            "on-error": "#ffefee",
+            "surface-dim": "#ffc7c4",
+            "tertiary": "#833e9a",
+            "outline": "#a26765",
+            "on-secondary": "#ffefee",
+            "surface-container-high": "#ffdad8",
+            "on-primary-container": "#470d00",
+            "surface-bright": "#fff4f3",
+            "on-secondary-fixed-variant": "#922d2f",
+            "primary-dim": "#962600",
+            "secondary-container": "#ffc3c0",
+            "on-primary": "#ffefec",
+            "background": "#fff4f3",
+            "surface": "#fff4f3",
+            "error": "#b31b25",
+            "on-error-container": "#570008",
+            "primary-fixed-dim": "#ff5d2c",
+            "secondary-dim": "#902c2f",
+            "on-tertiary-fixed-variant": "#611b79",
+            "primary-fixed": "#ff7851",
+            "tertiary-dim": "#75318d",
+            "tertiary-fixed": "#e699fd",
+            "tertiary-container": "#e699fd",
+            "on-tertiary-fixed": "#360049",
+            "on-background": "#4e2120",
+            "inverse-surface": "#240304",
+            "primary": "#ab2d00",
+            "inverse-on-surface": "#ce8c89",
+            "on-tertiary-container": "#570e70",
+            "on-primary-fixed-variant": "#581300",
+            "surface-variant": "#ffd2d0",
+            "on-surface-variant": "#834c4b",
+            "surface-container-highest": "#ffd2d0",
+            "surface-tint": "#ab2d00",
+            "surface-container": "#ffe1e0",
+            "inverse-primary": "#fe5825",
+            "surface-container-lowest": "#ffffff",
+            "on-surface": "#4e2120",
+            "tertiary-fixed-dim": "#d78cee",
+            "primary-container": "#ff7851",
+            "outline-variant": "#e09c99",
+            "error-dim": "#9f0519",
+            "secondary-fixed-dim": "#ffafac",
+            "on-primary-fixed": "#000000",
+            "on-secondary-fixed": "#6a0e16",
+            "surface-container-low": "#ffedeb",
+            "secondary-fixed": "#ffc3c0",
+            "on-tertiary": "#ffedfe",
+            "error-container": "#fb5151",
+            "secondary": "#a03739"
+          },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Manrope"],
+            "label": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .editorial-title {
+      line-height: 0.85;
+      letter-spacing: -0.04em;
+    }
+  </style>
+  <title>Pedro Henrique | Designer Gráfico</title>
+</head>
+
+<body class="bg-background text-on-surface font-body overflow-x-hidden selection:bg-primary/20 selection:text-primary">
+  <!-- TopNavBar Shell -->
+  <nav
+    class="fixed top-0 w-full z-50 bg-[#fff4f3]/70 dark:bg-[#1a0b0a]/70 backdrop-blur-md shadow-[0_40px_40px_rgba(78,33,32,0.06)]">
+    <div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+      <div class="text-xl font-bold text-[#4e2120] dark:text-[#fff4f3] tracking-tighter font-headline">Pedro Henrique
+      </div>
+      <div class="hidden md:flex gap-10 font-['Plus_Jakarta_Sans'] text-sm tracking-tight uppercase">
+        <a class="text-[#ab2d00] dark:text-[#ff7851] border-b-2 border-[#ab2d00] pb-1 font-bold"
+          href="index.html">Lar</a>
+        <a class="text-[#4e2120] dark:text-[#efd9d8] hover:text-[#ab2d00] transition-colors duration-300"
+          href="about.html">Sobre</a>
+        <a class="text-[#4e2120] dark:text-[#efd9d8] hover:text-[#ab2d00] transition-colors duration-300"
+          href="notebooks-pt1.html">Cadernos Parte 1</a>
+        <a class="text-[#4e2120] dark:text-[#efd9d8] hover:text-[#ab2d00] transition-colors duration-300"
+          href="notebooks-pt2.html">Cadernos Parte 2</a>
+        <a class="text-[#4e2120] dark:text-[#efd9d8] hover:text-[#ab2d00] transition-colors duration-300"
+          href="illustration.html">Ilustração</a>
+        <a class="text-[#4e2120] dark:text-[#efd9d8] hover:text-[#ab2d00] transition-colors duration-300"
+          href="banners.html">Faixas</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="contact.html">
+          <button translate="no"
+            class="material-symbols-outlined text-[#ab2d00] dark:text-[#ff7851] hover:scale-110 duration-200"
+            data-icon="mail">mail</button>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <main class="relative min-h-screen pt-32 flex items-center overflow-hidden">
+    <!-- Organic Background Elements (Signature Orange Circles) -->
+    <div
+      class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] rounded-full border border-primary/20 pointer-events-none">
+    </div>
+    <div class="absolute bottom-[10%] left-[-10%] w-[450px] h-[450px] rounded-full bg-primary/5 pointer-events-none">
+    </div>
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-primary/5 pointer-events-none">
+    </div>
+    <div class="container mx-auto px-8 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+        <!-- Left Content: Artist Name & Intro -->
+        <div class="md:col-span-5 mb-12 md:mb-0">
+          <div class="space-y-6">
+            <p class="font-label text-primary uppercase tracking-[0.3em] font-bold text-sm">Designer Gráfico</p>
+            <h1 class="font-headline text-5xl md:text-7xl font-bold text-on-surface tracking-tighter leading-none">Pedro
+              Henrique</h1>
+            <p class="font-body text-lg text-on-surface-variant max-w-md leading-relaxed mt-4">
+              Explorando a interseção do minimalismo digital e formas orgânicas. Criando experiências visuais que
+              equilibram estética ousada com clareza funcional.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-4">
+              <a class="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white font-bold rounded-full shadow-lg hover:shadow-primary/20 transition-all duration-300 active:scale-95 inline-block text-center"
+                href="#featured-works">
+                Ver Trabalhos Selecionados
+              </a>
+              <a class="px-8 py-4 border border-outline-variant/30 text-primary font-bold rounded-full hover:bg-primary/5 transition-all duration-300 inline-block text-center"
+                href="about.html">
+                Sobre Mim
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+  </main>
+  <!-- Bento Grid Featured Work Section -->
+  <section class="py-24 bg-surface-container-low/50" id="featured-works">
+    <div class="container mx-auto px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <!-- Large Featured Card -->
+        <a class="md:col-span-2 md:row-span-2 group relative block rounded-lg overflow-hidden aspect-[4/5] md:aspect-auto"
+          href="illustration.html">
+          <img alt="Daredevil comic art illustration piece"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 focus:scale-110"
+            src="assets/WhatsApp Image 2026-01-13 at 11.22.48.jpg" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-8 flex flex-col justify-end">
+            <span class="text-white/60 text-xs font-label uppercase tracking-widest mb-2">Ilustração & Arte em
+              Quadrinhos</span>
+            <h3 class="text-white text-3xl font-headline font-bold">A Antologia de Quadrinhos</h3>
+          </div>
+          <div
+            class="absolute top-8 right-8 w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shadow-xl opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+            <span class="material-symbols-outlined" translate="no">arrow_outward</span>
+          </div>
+        </a>
+        <!-- Secondary Cards -->
+        <a class="md:col-span-2 group relative block rounded-lg overflow-hidden h-[300px]" href="notebooks-pt1.html">
+          <img alt="Editorial layout notebooks collection"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 focus:scale-110"
+            src="assets/19.jpg" />
+          <div class="absolute inset-0 bg-on-background/10 backdrop-blur-[2px]"></div>
+          <div class="absolute inset-0 p-8 flex flex-col justify-between">
+            <h3 class="text-white text-2xl font-headline font-bold">Layouts Editoriais & Cadernos</h3>
+            <div
+              class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary self-end shadow-xl hover:scale-110 duration-300 transform group-hover:rotate-45">
+              <span class="material-symbols-outlined" translate="no">arrow_outward</span>
+            </div>
+          </div>
+        </a>
+        <a class="md:col-span-1 group relative block rounded-lg overflow-hidden h-[300px]" href="banners.html">
+          <img alt="Sports and Marketing digital banners"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 focus:scale-110"
+            src="assets/Times_PEDRO.jpg" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-8 flex flex-col justify-end">
+            <span class="text-white/60 text-xs font-label uppercase tracking-widest mb-2">Marketing</span>
+            <h3 class="text-white text-xl font-headline font-bold">Mídias Sociais & Faixas</h3>
+          </div>
+        </a>
+        <div
+          class="md:col-span-1 group relative rounded-lg overflow-hidden h-[300px] bg-primary-container p-8 flex flex-col justify-center items-center text-center">
+          <a class="font-label text-sm uppercase tracking-widest font-bold text-on-primary-container underline decoration-2 underline-offset-4"
+            href="contact.html">Entre em contato</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer Shell -->
+
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-secondary-container": "#852327",
+            "on-error": "#ffefee",
+            "surface-dim": "#ffc7c4",
+            "tertiary": "#833e9a",
+            "outline": "#a26765",
+            "on-secondary": "#ffefee",
+            "surface-container-high": "#ffdad8",
+            "on-primary-container": "#470d00",
+            "surface-bright": "#fff4f3",
+            "on-secondary-fixed-variant": "#922d2f",
+            "primary-dim": "#962600",
+            "secondary-container": "#ffc3c0",
+            "on-primary": "#ffefec",
+            "background": "#fff4f3",
+            "surface": "#fff4f3",
+            "error": "#b31b25",
+            "on-error-container": "#570008",
+            "primary-fixed-dim": "#ff5d2c",
+            "secondary-dim": "#902c2f",
+            "on-tertiary-fixed-variant": "#611b79",
+            "primary-fixed": "#ff7851",
+            "tertiary-dim": "#75318d",
+            "tertiary-fixed": "#e699fd",
+            "tertiary-container": "#e699fd",
+            "on-tertiary-fixed": "#360049",
+            "on-background": "#4e2120",
+            "inverse-surface": "#240304",
+            "primary": "#ab2d00",
+            "inverse-on-surface": "#ce8c89",
+            "on-tertiary-container": "#570e70",
+            "on-primary-fixed-variant": "#581300",
+            "surface-variant": "#ffd2d0",
+            "on-surface-variant": "#834c4b",
+            "surface-container-highest": "#ffd2d0",
+            "surface-tint": "#ab2d00",
+            "surface-container": "#ffe1e0",
+            "inverse-primary": "#fe5825",
+            "surface-container-lowest": "#ffffff",
+            "on-surface": "#4e2120",
+            "tertiary-fixed-dim": "#d78cee",
+            "primary-container": "#ff7851",
+            "outline-variant": "#e09c99",
+            "error-dim": "#9f0519",
+            "secondary-fixed-dim": "#ffafac",
+            "on-primary-fixed": "#000000",
+            "on-secondary-fixed": "#6a0e16",
+            "surface-container-low": "#ffedeb",
+            "secondary-fixed": "#ffc3c0",
+            "on-tertiary": "#ffedfe",
+            "error-container": "#fb5151",
+            "secondary": "#a03739"
+          },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Manrope"],
+            "label": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .editorial-image-mask {
+      border-radius: 2rem;
+      overflow: hidden;
+    }
+
+    .organic-shape {
+      position: absolute;
+      z-index: -1;
+      filter: blur(80px);
+      opacity: 0.15;
+    }
+  </style>
+  <title>Notebooks Pt1</title>
+</head>
+
+<body class="bg-background text-on-surface font-body selection:bg-primary/20 selection:text-primary">
+  <!-- TopNavBar -->
+  <nav
+    class="fixed top-0 w-full z-50 bg-[#fff4f3]/70 dark:bg-[#1a0b0a]/70 backdrop-blur-md shadow-[0_40px_40px_rgba(78,33,32,0.06)]">
+    <div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+      <div class="text-xl font-bold text-[#4e2120] dark:text-[#fff4f3] tracking-tighter font-headline">
+        Pedro Henrique
+      </div>
+      <div class="hidden md:flex items-center space-x-8 font-['Plus_Jakarta_Sans'] text-sm tracking-tight uppercase">
+        <a class="text-[#4e2120] dark:text-[#efd9d8] hover:text-[#ab2d00] transition-colors duration-300"
+          href="index.html">Lar</a>
+        <a class="text-[#4e2120] dark:text-[#efd9d8] hover:text-[#ab2d00] transition-colors duration-300"
+          href="about.html">Sobre</a>
+        <a class="text-[#ab2d00] dark:text-[#ff7851] border-b-2 border-[#ab2d00] pb-1 font-bold"
+          href="notebooks-pt1.html">Cadernos Parte 1</a>
+        <a class="text-[#4e2120] dark:text-[#efd9d8] hover:text-[#ab2d00] transition-colors duration-300"
+          href="notebooks-pt2.html">Cadernos Parte 2</a>
+        <a class="text-[#4e2120] dark:text-[#efd9d8] hover:text-[#ab2d00] transition-colors duration-300"
+          href="illustration.html">Ilustração</a>
+        <a class="text-[#4e2120] dark:text-[#efd9d8] hover:text-[#ab2d00] transition-colors duration-300"
+          href="banners.html">Faixas</a>
+      </div>
+      <div class="flex items-center gap-4 text-[#ab2d00]">
+        <a href="contact.html">
+          <button translate="no"
+            class="material-symbols-outlined text-[#ab2d00] dark:text-[#ff7851] hover:scale-110 duration-200"
+            data-icon="mail">mail</button>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <main class="relative pt-32 pb-24 overflow-hidden">
+    <!-- Background Organic Elements -->
+    <div class="organic-shape top-20 -left-20 w-96 h-96 bg-primary rounded-full"></div>
+    <div class="organic-shape bottom-20 -right-20 w-[30rem] h-[30rem] bg-[#2d5a27] rounded-full"></div>
+    <div class="max-w-screen-2xl mx-auto px-8">
+      <!-- Hero Header -->
+      <header class="mb-20 md:mb-32">
+        <span
+          class="inline-block py-2 px-6 rounded-full bg-primary-container/10 text-primary font-label text-sm uppercase tracking-widest mb-6">Volume
+          01</span>
+        <h1 class="font-headline text-6xl md:text-8xl font-extrabold tracking-tighter mb-8 leading-[0.9]">
+          Cadernos <br /> <span class="text-primary">Parte 1</span>
+        </h1>
+        <p class="max-w-2xl text-xl md:text-2xl text-on-surface-variant font-light leading-relaxed">
+          Uma exploração de texturas orgânicas e minimalismo.
+          <br> Esta coleção redefine o objeto cotidiano como uma peça de curadoria visual.
+        </p>
+      </header>
+      <!-- Editorial Bento Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 items-start">
+        <!-- Left Content: The "Green" Accent Block -->
+        <div class="md:col-span-5 space-y-12">
+          <div class="bg-[#e8f2e7] rounded-lg p-12 relative overflow-hidden group">
+            <div class="absolute -top-10 -right-10 w-40 h-40 border-2 border-[#2d5a27]/10 rounded-full"></div>
+            <h2 class="font-headline text-3xl font-bold text-[#2d5a27] mb-6">A Estética</h2>
+            <p class="text-[#2d5a27]/80 leading-relaxed mb-8">
+              Nesta primeira fase, focamos na harmonização entre o papel texturizado e padrões botânicos simplificados.
+              O objetivo é criar uma conexão imediata entre o usuário e o ato de escrever.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-center gap-4">
+                <span class="w-12 h-[1px] bg-[#2d5a27]/30"></span>
+                <span class="text-sm font-label uppercase tracking-widest text-[#2d5a27]">
+                </span>
+              </div>
+              <div class="flex items-center gap-4">
+                <span class="w-12 h-[1px] bg-[#2d5a27]/30"></span>
+                <span class="text-sm font-label uppercase tracking-widest text-[#2d5a27]">
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="editorial-image-mask aspect-[5/4] bg-surface-container-low shadow-lg">
+            <img alt="Mockup de notebook"
+              class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+              src="assets/19.jpg" />
+          </div>
+        </div>
+        <!-- Right Content: Main Visual Showcase -->
+        <div class="md:col-span-7 space-y-12 md:mt-24">
+          <div class="editorial-image-mask aspect-[5/4] bg-surface-container shadow-2xl relative">
+            <img alt="Layout editorial" class="w-full h-full object-cover" src="assets/20.jpg" />
+            <div
+              class="absolute bottom-6 right-6 bg-white/90 backdrop-blur px-4 py-2 rounded-full text-xs font-label text-primary shadow-sm uppercase tracking-tighter">
+              Coleção Primária
+            </div>
+          </div>
+          <div
+            class="p-12 border border-outline-variant/30 rounded-lg flex justify-center items-center bg-surface-container-lowest mt-12">
+            <a class="group relative px-8 py-4 bg-primary text-white rounded-full font-label font-bold overflow-hidden shadow-xl hover:shadow-primary/20 transition-all"
+              href="notebooks-pt2.html">
+              <span class="relative z-10">Ir para a segunda parte</span>
+              <div
+                class="absolute inset-0 bg-gradient-to-tr from-primary to-primary-container opacity-0 group-hover:opacity-100 transition-opacity">
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+
+</body>
+
+</html>

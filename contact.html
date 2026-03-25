@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-tint": "#ab2d00",
+            "error-dim": "#9f0519",
+            "surface-bright": "#fff4f3",
+            "surface": "#fff4f3",
+            "outline": "#a26765",
+            "surface-container-highest": "#ffd2d0",
+            "background": "#fff4f3",
+            "surface-variant": "#ffd2d0",
+            "secondary-fixed-dim": "#ffafac",
+            "on-tertiary": "#ffedfe",
+            "surface-container-lowest": "#ffffff",
+            "on-error": "#ffefee",
+            "error-container": "#fb5151",
+            "secondary-fixed": "#ffc3c0",
+            "on-primary-container": "#470d00",
+            "secondary-dim": "#902c2f",
+            "on-tertiary-fixed": "#360049",
+            "on-surface-variant": "#834c4b",
+            "on-primary-fixed": "#000000",
+            "on-background": "#4e2120",
+            "inverse-primary": "#fe5825",
+            "secondary": "#a03739",
+            "error": "#b31b25",
+            "surface-container-low": "#ffedeb",
+            "inverse-on-surface": "#ce8c89",
+            "on-secondary-container": "#852327",
+            "on-primary-fixed-variant": "#581300",
+            "on-secondary-fixed-variant": "#922d2f",
+            "surface-container-high": "#ffdad8",
+            "primary-fixed": "#ff7851",
+            "inverse-surface": "#240304",
+            "on-surface": "#4e2120",
+            "primary-dim": "#962600",
+            "primary-container": "#ff7851",
+            "tertiary-container": "#e699fd",
+            "tertiary": "#833e9a",
+            "outline-variant": "#e09c99",
+            "on-error-container": "#570008",
+            "tertiary-fixed": "#e699fd",
+            "tertiary-fixed-dim": "#d78cee",
+            "surface-container": "#ffe1e0",
+            "primary-fixed-dim": "#ff5d2c",
+            "on-primary": "#ffefec",
+            "primary": "#ab2d00",
+            "surface-dim": "#ffc7c4",
+            "on-secondary-fixed": "#6a0e16",
+            "on-tertiary-container": "#570e70",
+            "on-tertiary-fixed-variant": "#611b79",
+            "on-secondary": "#ffefee",
+            "tertiary-dim": "#75318d",
+            "secondary-container": "#ffc3c0"
+          },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Manrope"],
+            "label": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .editorial-shadow {
+      box-shadow: 0 40px 40px rgba(78, 33, 32, 0.06);
+    }
+  </style>
+  <title>Contact</title>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+  <!-- TopNavBar -->
+  <nav
+    class="fixed top-0 w-full z-50 bg-[#fff4f3]/70 backdrop-blur-md flex justify-between items-center px-8 py-6 max-w-none mx-auto shadow-[0_40px_40px_rgba(78,33,32,0.06)]">
+    <div class="text-2xl font-bold tracking-tighter text-[#4e2120] font-headline">Pedro Henrique</div>
+    <div class="hidden md:flex gap-10 items-center font-headline font-medium tracking-tight">
+      <a class="text-[#4e2120] opacity-80 hover:opacity-100 hover:text-[#ab2d00] transition-all duration-300"
+        href="index.html">Lar</a>
+      <a class="text-[#4e2120] opacity-80 hover:opacity-100 hover:text-[#ab2d00] transition-all duration-300"
+        href="about.html">Sobre</a>
+      <a class="text-[#4e2120] opacity-80 hover:opacity-100 hover:text-[#ab2d00] transition-all duration-300"
+        href="notebooks-pt1.html">Cadernos Parte 1</a>
+      <a class="text-[#4e2120] opacity-80 hover:opacity-100 hover:text-[#ab2d00] transition-all duration-300"
+        href="notebooks-pt2.html">Cadernos Parte 2</a>
+      <a class="text-[#4e2120] opacity-80 hover:opacity-100 hover:text-[#ab2d00] transition-all duration-300"
+        href="illustration.html">Ilustração</a>
+      <a class="text-[#4e2120] opacity-80 hover:opacity-100 hover:text-[#ab2d00] transition-all duration-300"
+        href="banners.html">Faixas</a>
+    </div>
+    <div class="flex items-center gap-6">
+      <a class="text-[#ab2d00] border-b-2 border-[#ab2d00] pb-1 font-headline font-medium scale-95 active:scale-90 transition-transform"
+        href="contact.html">Contato</a>
+    </div>
+  </nav>
+  <main class="relative pt-32 min-h-screen overflow-hidden">
+    <!-- Organic Background Elements -->
+    <div class="absolute top-20 -right-20 w-[500px] h-[500px] rounded-full border border-outline-variant/15 -z-10">
+    </div>
+    <div class="absolute bottom-40 -left-40 w-[600px] h-[600px] bg-surface-container-low rounded-full -z-10"></div>
+    <div class="absolute top-1/2 left-1/4 w-[200px] h-[200px] border border-primary/10 rounded-full -z-10"></div>
+    <!-- Contact Content Section -->
+    <div class="max-w-7xl mx-auto px-8 md:px-12 py-20 flex flex-col md:flex-row gap-16 items-start">
+      <!-- Left Column: Editorial Statement -->
+      <div class="w-full md:w-1/2 space-y-12">
+        <div>
+          <span
+            class="inline-block bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label text-sm font-semibold mb-6">Vamos
+            Conversar</span>
+          <h1
+            class="font-headline text-7xl md:text-8xl font-extrabold tracking-tighter text-on-surface leading-[0.9] mb-8">
+            Obrigado!
+          </h1>
+          <p class="font-headline text-2xl md:text-3xl text-on-surface-variant font-medium leading-relaxed max-w-xl">
+            Obrigada por explorar meu espaço criativo.
+
+
+          </p>
+        </div>
+        <!-- Primary Action -->
+        <div class="pt-4">
+
+        </div>
+      </div>
+      <!-- Right Column: Details & Bento Style Info -->
+      <div class="w-full md:w-1/2 grid grid-cols-1 gap-8">
+        <!-- Contact Card -->
+        <div class="bg-surface-container-low p-10 rounded-xl space-y-8 editorial-shadow">
+          <div>
+            <h3 class="font-label text-xs uppercase tracking-[0.2em] text-primary font-bold mb-6">Comunicação Direta
+            </h3>
+            <div class="space-y-6">
+              <div class="flex items-center gap-6 group">
+                <div
+                  class="w-12 h-12 rounded-full bg-surface flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                  <span translate="no" class="material-symbols-outlined">mail</span>
+                </div>
+                <a class="font-headline text-2xl font-bold tracking-tight text-on-surface hover:text-primary transition-colors"
+                  href="mailto:pedromib@zohomail.com">
+                  pedromib@zohomail.com
+                </a>
+              </div>
+              <div class="flex items-center gap-6 group">
+                <div
+                  class="w-12 h-12 rounded-full bg-surface flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                  <span translate="no" class="material-symbols-outlined">call</span>
+                </div>
+                <span class="font-headline text-2xl font-bold tracking-tight text-on-surface">
+                  +55 (11) 91336-5795
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-8 border-t border-outline-variant/20">
+            <h3 class="font-label text-xs uppercase tracking-[0.2em] text-primary font-bold mb-6">Redes Sociais</h3>
+            <div class="flex flex-wrap gap-4">
+              <a class="px-8 py-4 bg-surface rounded-full font-headline font-bold text-on-surface hover:bg-primary hover:text-white transition-all duration-300"
+                href="https://www.linkedin.com/in/pedro-mendes-souza-b91559313">LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Editorial Quote Card -->
+        <div class="bg-primary p-12 rounded-xl text-white overflow-hidden relative group">
+          <div class="absolute top-0 right-0 p-8 opacity-0">
+            <span translate="no" class="material-symbols-outlined text-9xl">format_quote</span>
+          </div>
+          <p class="font-headline text-3xl font-bold leading-tight relative z-10">
+            "Desenhando com propósito, criando com paixão."
+          </p>
+
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- Featured Image Section (Asymmetric Bleed) -->
+    <div class="w-full max-w-7xl mx-auto px-8 md:px-12 pb-32">
+      <div class="relative w-full aspect-[21/9] rounded-lg overflow-hidden editorial-shadow group">
+        <img alt="Pedro Henrique portfolio page image"
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          data-alt="Modern minimalist workspace with warm editorial lighting" src="assets/page-7.png" />
+        <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-12">
+          <div class="bg-white/70 backdrop-blur-xl p-8 rounded-lg max-w-md shadow-2xl">
+            <h4 class="font-headline text-xl font-bold mb-2">O Espaço do Estúdio</h4>
+            <p class="text-sm text-on-surface-variant font-medium">Focado em entregar experiências digitais premium
+              através de design intencional e pensamento estratégico.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+
+</body>
+
+</html>
