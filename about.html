@@ -126,14 +126,41 @@
         <a class="font-headline text-sm tracking-tight uppercase text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300"
           href="banners.html">Faixas</a>
       </div>
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-3">
         <button class="text-[#ab2d00] p-2 hover:scale-95 active:opacity-80 transition-all">
           <a href="contact.html">
             <span translate="no" class="material-symbols-outlined" data-icon="mail">mail</span>
           </a>
         </button>
+        <button id="menu-btn" aria-label="Abrir menu" aria-expanded="false"
+          class="md:hidden flex items-center justify-center text-[#4e2120] hover:text-[#ab2d00] transition-colors duration-200">
+          <span class="material-symbols-outlined" translate="no">menu</span>
+        </button>
       </div>
     </div>
+    <!-- Mobile dropdown menu -->
+    <div id="mobile-menu"
+      class="hidden md:hidden bg-[#fff4f3]/95 backdrop-blur-md border-t border-[#4e2120]/10 px-8 py-6 flex flex-col gap-5 font-headline text-sm tracking-tight uppercase">
+      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="index.html">Lar</a>
+      <a class="text-[#ab2d00] border-b border-[#ab2d00]/30 pb-2 font-bold" href="about.html">Sobre</a>
+      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="notebooks-pt1.html">Cadernos Parte 1</a>
+      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="notebooks-pt2.html">Cadernos Parte 2</a>
+      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="illustration.html">Ilustração</a>
+      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="banners.html">Faixas</a>
+      <a class="text-[#ab2d00] font-bold" href="contact.html">Contato</a>
+    </div>
+    <script>
+      (function() {
+        var btn = document.getElementById('menu-btn');
+        var menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', function() {
+          var isOpen = !menu.classList.contains('hidden');
+          menu.classList.toggle('hidden', isOpen);
+          btn.setAttribute('aria-expanded', String(!isOpen));
+          btn.querySelector('span').textContent = isOpen ? 'menu' : 'close';
+        });
+      })();
+    </script>
   </nav>
   <main class="relative min-h-screen pt-32 pb-24 overflow-hidden">
     <!-- Organic Background Elements -->
@@ -153,9 +180,9 @@
               class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               data-alt="Portrait of a young creative graphic designer"
               src="assets/WhatsApp Image 2026-03-23 at 21.02.12.jpeg" />
-            <!-- Overlapping Organic Shape -->
+            <!-- Overlapping Organic Shape — clipped by parent overflow-hidden -->
             <div
-              class="absolute -bottom-12 -right-12 w-48 h-48 bg-primary rounded-full mix-blend-multiply opacity-80 group-hover:scale-110 transition-transform duration-500">
+              class="absolute bottom-0 right-0 w-32 h-32 md:w-48 md:h-48 bg-primary rounded-full mix-blend-multiply opacity-80 group-hover:scale-110 transition-transform duration-500 translate-x-1/3 translate-y-1/3">
             </div>
           </div>
           <div class="mt-8 flex items-center gap-4">
@@ -166,7 +193,7 @@
         </div>
         <!-- Biography Section -->
         <div class="w-full md:w-7/12 mt-12 md:mt-0">
-          <h1 class="font-headline text-5xl lg:text-7xl font-bold tracking-tighter leading-[1.1] mb-12">
+          <h1 class="font-headline text-3xl md:text-5xl lg:text-7xl font-bold tracking-tighter leading-[1.1] mb-12">
             Eu sou Pedro Henrique, <br />
             <span class="text-primary italic">criando histórias visuais</span> <br />
             através do design.

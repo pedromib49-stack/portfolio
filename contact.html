@@ -105,28 +105,56 @@
 </head>
 
 <body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
-  <!-- TopNavBar -->
   <nav
-    class="fixed top-0 w-full z-50 bg-[#fff4f3]/70 backdrop-blur-md flex justify-between items-center px-8 py-6 max-w-none mx-auto shadow-[0_40px_40px_rgba(78,33,32,0.06)]">
-    <div class="text-2xl font-bold tracking-tighter text-[#4e2120] font-headline">Pedro Henrique</div>
-    <div class="hidden md:flex gap-10 items-center font-headline font-medium tracking-tight">
-      <a class="text-[#4e2120] opacity-80 hover:opacity-100 hover:text-[#ab2d00] transition-all duration-300"
-        href="index.html">Lar</a>
-      <a class="text-[#4e2120] opacity-80 hover:opacity-100 hover:text-[#ab2d00] transition-all duration-300"
-        href="about.html">Sobre</a>
-      <a class="text-[#4e2120] opacity-80 hover:opacity-100 hover:text-[#ab2d00] transition-all duration-300"
-        href="notebooks-pt1.html">Cadernos Parte 1</a>
-      <a class="text-[#4e2120] opacity-80 hover:opacity-100 hover:text-[#ab2d00] transition-all duration-300"
-        href="notebooks-pt2.html">Cadernos Parte 2</a>
-      <a class="text-[#4e2120] opacity-80 hover:opacity-100 hover:text-[#ab2d00] transition-all duration-300"
-        href="illustration.html">Ilustração</a>
-      <a class="text-[#4e2120] opacity-80 hover:opacity-100 hover:text-[#ab2d00] transition-all duration-300"
-        href="banners.html">Faixas</a>
+    class="fixed top-0 w-full z-50 bg-[#fff4f3]/70 backdrop-blur-md shadow-[0_40px_40px_rgba(78,33,32,0.06)]">
+    <div class="flex justify-between items-center px-8 py-6 max-w-none mx-auto">
+      <div class="text-2xl font-bold tracking-tighter text-[#4e2120] font-headline">Pedro Henrique</div>
+      <div class="hidden md:flex gap-10 items-center font-headline font-medium tracking-tight">
+        <a class="text-[#4e2120] opacity-80 hover:opacity-100 hover:text-[#ab2d00] transition-all duration-300"
+          href="index.html">Lar</a>
+        <a class="text-[#4e2120] opacity-80 hover:opacity-100 hover:text-[#ab2d00] transition-all duration-300"
+          href="about.html">Sobre</a>
+        <a class="text-[#4e2120] opacity-80 hover:opacity-100 hover:text-[#ab2d00] transition-all duration-300"
+          href="notebooks-pt1.html">Cadernos Parte 1</a>
+        <a class="text-[#4e2120] opacity-80 hover:opacity-100 hover:text-[#ab2d00] transition-all duration-300"
+          href="notebooks-pt2.html">Cadernos Parte 2</a>
+        <a class="text-[#4e2120] opacity-80 hover:opacity-100 hover:text-[#ab2d00] transition-all duration-300"
+          href="illustration.html">Ilustração</a>
+        <a class="text-[#4e2120] opacity-80 hover:opacity-100 hover:text-[#ab2d00] transition-all duration-300"
+          href="banners.html">Faixas</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a class="text-[#ab2d00] border-b-2 border-[#ab2d00] pb-1 font-headline font-medium scale-95 active:scale-90 transition-transform"
+          href="contact.html">Contato</a>
+        <button id="menu-btn" aria-label="Abrir menu" aria-expanded="false"
+          class="md:hidden flex items-center justify-center text-[#4e2120] hover:text-[#ab2d00] transition-colors duration-200">
+          <span class="material-symbols-outlined" translate="no">menu</span>
+        </button>
+      </div>
     </div>
-    <div class="flex items-center gap-6">
-      <a class="text-[#ab2d00] border-b-2 border-[#ab2d00] pb-1 font-headline font-medium scale-95 active:scale-90 transition-transform"
-        href="contact.html">Contato</a>
+    <!-- Mobile dropdown menu -->
+    <div id="mobile-menu"
+      class="hidden md:hidden bg-[#fff4f3]/95 backdrop-blur-md border-t border-[#4e2120]/10 px-8 py-6 flex flex-col gap-5 font-headline text-sm tracking-tight uppercase">
+      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="index.html">Lar</a>
+      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="about.html">Sobre</a>
+      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="notebooks-pt1.html">Cadernos Parte 1</a>
+      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="notebooks-pt2.html">Cadernos Parte 2</a>
+      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="illustration.html">Ilustração</a>
+      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="banners.html">Faixas</a>
+      <a class="text-[#ab2d00] border-b border-[#ab2d00]/30 pb-2 font-bold" href="contact.html">Contato</a>
     </div>
+    <script>
+      (function() {
+        var btn = document.getElementById('menu-btn');
+        var menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', function() {
+          var isOpen = !menu.classList.contains('hidden');
+          menu.classList.toggle('hidden', isOpen);
+          btn.setAttribute('aria-expanded', String(!isOpen));
+          btn.querySelector('span').textContent = isOpen ? 'menu' : 'close';
+        });
+      })();
+    </script>
   </nav>
   <main class="relative pt-32 min-h-screen overflow-hidden">
     <!-- Organic Background Elements -->

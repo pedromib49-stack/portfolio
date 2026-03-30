@@ -140,8 +140,35 @@
             class="material-symbols-outlined text-[#ab2d00] dark:text-[#ff7851] hover:scale-110 duration-200"
             data-icon="mail">mail</button>
         </a>
+        <button id="menu-btn" aria-label="Abrir menu" aria-expanded="false"
+          class="md:hidden flex items-center justify-center text-[#4e2120] hover:text-[#ab2d00] transition-colors duration-200">
+          <span class="material-symbols-outlined" translate="no">menu</span>
+        </button>
       </div>
     </div>
+    <!-- Mobile dropdown menu -->
+    <div id="mobile-menu"
+      class="hidden md:hidden bg-[#fff4f3]/95 backdrop-blur-md border-t border-[#4e2120]/10 px-8 py-6 flex flex-col gap-5 font-headline text-sm tracking-tight uppercase">
+      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="index.html">Lar</a>
+      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="about.html">Sobre</a>
+      <a class="text-[#ab2d00] border-b border-[#ab2d00]/30 pb-2 font-bold" href="notebooks-pt1.html">Cadernos Parte 1</a>
+      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="notebooks-pt2.html">Cadernos Parte 2</a>
+      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="illustration.html">Ilustração</a>
+      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="banners.html">Faixas</a>
+      <a class="text-[#ab2d00] font-bold" href="contact.html">Contato</a>
+    </div>
+    <script>
+      (function() {
+        var btn = document.getElementById('menu-btn');
+        var menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', function() {
+          var isOpen = !menu.classList.contains('hidden');
+          menu.classList.toggle('hidden', isOpen);
+          btn.setAttribute('aria-expanded', String(!isOpen));
+          btn.querySelector('span').textContent = isOpen ? 'menu' : 'close';
+        });
+      })();
+    </script>
   </nav>
   <main class="relative pt-32 pb-24 overflow-hidden">
     <!-- Background Organic Elements -->
