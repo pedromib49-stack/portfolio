@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import { getCollection } from 'astro:content';
+
+const projetos = await getCollection('projetos');
+---
+<BaseLayout title="Trabalhos Recentes | Pedro Henrique">
+  <Navigation activePage="projetos" />
+  <main class="pt-32 pb-24 px-8 max-w-screen-2xl mx-auto">
+    <header class="mb-20">
+      <h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface mb-6">
+        Trabalhos <span class="text-primary italic">Recentes.</span>
+      </h1>
+      <p class="font-body text-xl text-on-surface-variant font-light max-w-3xl">Uma vitrine dos novos desenvolvimentos, explorando design gráfico, interfaces e experimentações visuais.</p>
+    </header>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {projetos.map((projeto) => (
+        <a href={`/projetos/${projeto.id}`} class="group block space-y-4">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-surface-container-low">
+            {projeto.data.coverImage ? (
+              <img src={projeto.data.coverImage} alt={projeto.data.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
+            ) : (
+              <div class="w-full h-full bg-primary-container/20 flex items-center justify-center">
+                <span class="material-symbols-outlined text-4xl text-primary opacity-50">draft</span>
+              </div>
+            )}
+          </div>
+          <div>
+            <span class="text-xs font-label uppercase tracking-widest text-primary font-bold">{projeto.data.client || 'Estúdio'}</span>
+            <h3 class="font-headline text-2xl font-bold mt-1 group-hover:text-primary transition-colors">{projeto.data.title}</h3>
+          </div>
+        </a>
+      ))}
+    </div>
+  </main>
+</BaseLayout>

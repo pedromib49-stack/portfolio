@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+---
+<BaseLayout title="Sobre | Pedro Henrique" bodyClass="bg-surface selection:bg-primary-container selection:text-on-primary-container">
+  <Navigation activePage="about" />
+  <main class="relative min-h-screen pt-32 pb-24 overflow-hidden">
+    <!-- Organic Background Elements -->
+    <div class="absolute -top-24 -left-24 w-[600px] h-[600px] bg-surface-container rounded-full opacity-40 blur-3xl -z-10"></div>
+    <div class="absolute top-1/2 -right-48 w-[800px] h-[800px] border border-primary/10 rounded-full -z-10"></div>
+    <div class="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-primary/5 rounded-full blur-2xl -z-10"></div>
+    <div class="max-w-screen-2xl mx-auto px-8">
+      <div class="flex flex-col md:flex-row items-start gap-16 lg:gap-32">
+        <!-- Profile Image Section -->
+        <div class="w-full md:w-5/12 relative group">
+          <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-primary rounded-tl-lg z-10"></div>
+          <div class="aspect-[4/5] rounded-lg overflow-hidden bg-surface-container-high shadow-[0_40px_40px_rgba(78,33,32,0.06)] relative">
+            <img alt="Pedro Henrique Profile"
+              class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              src="/assets/WhatsApp Image 2026-03-23 at 21.02.12.jpeg" />
+            <div class="absolute bottom-0 right-0 w-32 h-32 md:w-48 md:h-48 bg-primary rounded-full mix-blend-multiply opacity-80 group-hover:scale-110 transition-transform duration-500 translate-x-1/3 translate-y-1/3"></div>
+          </div>
+          <div class="mt-8 flex items-center gap-4">
+            <div class="h-[1px] w-12 bg-primary"></div>
+            <span class="font-label text-sm uppercase tracking-[0.2em] text-primary font-bold">Designer Gráfico;</span>
+          </div>
+        </div>
+        <!-- Biography Section -->
+        <div class="w-full md:w-7/12 mt-12 md:mt-0">
+          <h1 class="font-headline text-3xl md:text-5xl lg:text-7xl font-bold tracking-tighter leading-[1.1] mb-12">
+            Eu sou Pedro Henrique, <br />
+            <span class="text-primary italic">criando histórias visuais</span> <br />
+            através do design.
+          </h1>
+          <div class="space-y-8 max-w-2xl">
+            <p class="font-body text-xl lg:text-2xl leading-relaxed text-on-surface/80">
+              Sou Pedro Henrique, designer gráfico com interesse em criação de peças digitais, identidade visual,
+              ilustração e composição. Gosto de trabalhar o design como uma forma de organizar ideias visualmente,
+              criando soluções que tenham clareza, intenção e personalidade. Meu trabalho transita entre referências
+              mais autorais e necessidades práticas de comunicação, sempre com atenção à estética, à hierarquia e ao
+              contexto de cada projeto.
+            </p>
+            <p class="font-body text-lg leading-relaxed text-on-surface/70">
+              Acredito que design não é apenas sobre deixar as coisas bonitas — é sobre curadoria. Cada linha, cada
+              escolha de cor e cada espaço em branco é uma decisão consciente para guiar o espectador através de uma
+              jornada emocional específica.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
+              <div class="p-8 bg-surface-container-low rounded-lg">
+                <span translate="no" class="material-symbols-outlined text-primary mb-4">brush</span>
+                <h3 class="font-headline font-bold text-lg mb-2">Direção Artística</h3>
+                <p class="font-body text-sm text-on-surface/60">Desenvolvendo identidades visuais coesas que ressoam com
+                  os valores essenciais da marca.</p>
+              </div>
+              <div class="p-8 bg-surface-container-low rounded-lg">
+                <span translate="no" class="material-symbols-outlined text-primary mb-4">layers</span>
+                <h3 class="font-headline font-bold text-lg mb-2">Design Editorial</h3>
+                <p class="font-body text-sm text-on-surface/60">Criando experiências de layout para
+                  monografias digitais e físicas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Stats Section -->
+  <section class="py-24 bg-surface-container-low">
+    <div class="max-w-screen-2xl mx-auto px-8">
+      <div class="flex justify-center">
+        <div class="p-16 w-full max-w-sm bg-primary text-surface rounded-lg flex flex-col justify-center items-center text-center">
+          <div class="font-headline text-6xl font-extrabold mb-4 tracking-tighter">03+</div>
+          <div class="font-label text-sm uppercase tracking-widest opacity-90">Anos de Experiência</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+---
+<BaseLayout title="Faixas | Pedro Henrique" bodyClass="selection:bg-primary-container selection:text-on-primary-container">
+  <style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+  <Navigation activePage="banners" />
+  <main class="pt-32 pb-24">
+    <!-- Project Hero -->
+    <header class="px-8 md:px-24 mb-32">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-end justify-between gap-12">
+        <div class="flex-1">
+          <span class="font-label uppercase tracking-[0.3em] text-primary text-sm mb-6 block"></span>
+          <h1 class="text-6xl md:text-8xl font-headline font-extrabold tracking-tighter leading-[0.9] text-on-background mb-8">
+            Faixas <br /><span class="text-primary italic">Comerciais.</span>
+          </h1>
+          <p class="max-w-xl text-xl text-on-surface-variant leading-relaxed">
+            Coleção de faixas promocionais desenvolvidas para contextos de varejo e campanhas sazonais. As peças
+            exploram contraste, hierarquia tipográfica e composição de alto impacto para comunicar ofertas, novidades e
+            temas comemorativos de forma rápida e visualmente atrativa.
+          </p>
+        </div>
+      </div>
+    </header>
+    <!-- Project Canvas -->
+    <section class="px-8 md:px-12 space-y-32">
+      <!-- Section 1 -->
+      <div class="relative max-w-7xl mx-auto flex flex-col gap-8">
+        <div class="absolute -left-20 top-0 w-96 h-96 bg-surface-container-low rounded-full opacity-50 -z-10 blur-3xl"></div>
+        <div class="w-full group">
+          <div class="overflow-hidden rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+            <img alt="Novidades commercial banner" class="w-full h-auto object-cover"
+              src="/assets/BannerNovidadesSemana4PEDRO (1).jpg" />
+          </div>
+        </div>
+        <div class="w-full space-y-6">
+          <div class="w-12 h-[1px] bg-primary"></div>
+          <h2 class="text-4xl font-headline font-bold text-on-background">Identidade de Varejo</h2>
+          <p class="text-lg text-on-surface-variant leading-relaxed italic">"Novidades"</p>
+          <p class="text-on-surface-variant max-w-3xl">Focando na estética moderna com layouts dinâmicos para destacar
+            as novidades da estação e ofertas semanais especiais.</p>
+        </div>
+      </div>
+      <!-- Section 2 -->
+      <div class="bg-surface-container-low py-24 -mx-8 md:-mx-12 px-8 md:px-12">
+        <div class="max-w-7xl mx-auto flex flex-col gap-8">
+          <div class="w-full group">
+            <div class="overflow-hidden rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+              <img alt="Times banner with cinematic lighting" class="w-full h-auto object-cover"
+                src="/assets/Times_PEDRO.jpg" />
+            </div>
+          </div>
+          <div class="w-full space-y-6">
+            <div class="w-12 h-[1px] bg-primary"></div>
+            <h2 class="text-4xl font-headline font-bold text-on-background">Dinâmica Esportiva</h2>
+            <p class="text-lg text-on-surface-variant leading-relaxed italic">"Futebol"</p>
+            <p class="text-on-surface-variant max-w-3xl">Capturando a intensidade e paixão dos times de futebol através
+              de iluminação dramática, cores vibrantes do time e layouts cinéticos.</p>
+            <div class="flex gap-4 pt-4">
+              <span class="px-4 py-2 bg-surface-container-highest text-on-surface-variant rounded-full text-xs font-label uppercase tracking-widest">Atmosférico</span>
+              <span class="px-4 py-2 bg-surface-container-highest text-on-surface-variant rounded-full text-xs font-label uppercase tracking-widest">Alto Contraste</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Section 3 -->
+      <div class="relative max-w-7xl mx-auto flex flex-col gap-8">
+        <div class="w-full group">
+          <div class="overflow-hidden rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+            <img alt="Natal holiday commercial banner" class="w-full h-auto object-cover"
+              src="/assets/Natal1Pedro.jpg" />
+          </div>
+        </div>
+        <div class="w-full space-y-6">
+          <div class="w-12 h-[1px] bg-primary"></div>
+          <h2 class="text-4xl font-headline font-bold text-on-background">Espírito Natalino</h2>
+          <p class="text-lg text-on-surface-variant leading-relaxed italic">"Natal"</p>
+          <p class="text-on-surface-variant max-w-3xl">Elevando a paleta de cores tradicional das festas de fim de ano
+            com tipografia elegante e composições festivas e acolhedoras para celebrar a época natalina.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

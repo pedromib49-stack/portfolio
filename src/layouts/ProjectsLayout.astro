@@ -1,0 +1,90 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+
+interface Props {
+  frontmatter: {
+    title: string;
+    client?: string;
+    date?: string | Date;
+    coverImage?: string;
+    description?: string;
+  };
+}
+
+const { frontmatter } = Astro.props;
+---
+<BaseLayout title={`${frontmatter.title} | Pedro Henrique`} bodyClass="bg-surface text-on-surface">
+  <Navigation activePage="projetos" />
+  
+  <main class="relative pt-32 pb-24 overflow-hidden">
+    <!-- Header Section -->
+    <header class="max-w-screen-2xl mx-auto px-8 mb-20 md:mb-32">
+      {frontmatter.client && (
+        <span class="inline-block py-2 px-6 rounded-full bg-primary-container/10 text-primary font-label text-sm uppercase tracking-widest mb-6">
+          {frontmatter.client}
+        </span>
+      )}
+      
+      <h1 class="font-headline text-5xl md:text-8xl font-extrabold tracking-tighter text-on-surface mb-8 leading-[0.9]">
+        {frontmatter.title}
+      </h1>
+      
+      {frontmatter.description && (
+        <p class="font-body text-xl md:text-2xl text-on-surface-variant leading-relaxed font-light max-w-4xl">
+          {frontmatter.description}
+        </p>
+      )}
+    </header>
+
+    {/* Cover Image */}
+    {frontmatter.coverImage && (
+      <div class="max-w-screen-2xl mx-auto px-8 mb-24">
+        <div class="w-full aspect-video md:aspect-[21/9] rounded-2xl overflow-hidden shadow-2xl relative group">
+          <div class="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-500 z-10" />
+          <img 
+            src={frontmatter.coverImage} 
+            alt={`Capa do projeto: ${frontmatter.title}`} 
+            class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+          />
+        </div>
+      </div>
+    )}
+
+    {/* Editorial Content Grid */}
+    <div class="max-w-screen-xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+      
+      <div class="md:col-span-8 prose prose-lg prose-headings:font-headline prose-headings:font-bold prose-headings:text-on-surface prose-p:text-on-surface-variant prose-p:font-body prose-a:text-primary hover:prose-a:text-primary-dim max-w-none">
+        <slot />
+      </div>
+      
+      {/* Sidebar Info */}
+      <aside class="md:col-span-4 bg-surface-container-low p-8 rounded-2xl sticky top-32">
+        <div class="space-y-6">
+          {frontmatter.client && (
+            <div class="border-b border-outline-variant/30 pb-4">
+              <span class="block font-label text-xs uppercase tracking-[0.2em] text-primary font-bold mb-2">Cliente / Tipo</span>
+              <p class="font-headline font-semibold text-lg text-on-surface">{frontmatter.client}</p>
+            </div>
+          )}
+          
+          {frontmatter.date && (
+            <div class="border-b border-outline-variant/30 pb-4">
+              <span class="block font-label text-xs uppercase tracking-[0.2em] text-primary font-bold mb-2">Ano / Data</span>
+              <p class="font-headline font-semibold text-lg text-on-surface">{new Date(frontmatter.date).getFullYear() || frontmatter.date}</p>
+            </div>
+          )}
+          
+          <div>
+            <span class="block font-label text-xs uppercase tracking-[0.2em] text-primary font-bold mb-4">Compartilhar</span>
+            <div class="flex gap-4">
+              <button title="Copiar Link" class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-primary hover:bg-primary-container hover:text-on-primary-container transition-colors" onclick="navigator.clipboard.writeText(window.location.href); alert('Link copiado!')">
+                <span class="material-symbols-outlined" translate="no">link</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+</BaseLayout>

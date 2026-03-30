@@ -1,0 +1,9 @@
+fragment ProjetosParts on Projetos {
+  __typename
+  title
+  client
+  date
+  coverImage
+  description
+  body
+}

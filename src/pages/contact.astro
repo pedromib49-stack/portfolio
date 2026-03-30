@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+---
+<BaseLayout title="Contato | Pedro Henrique" bodyClass="selection:bg-primary-container selection:text-on-primary-container">
+  <Navigation activePage="contact" />
+  <main class="relative pt-32 min-h-screen overflow-hidden">
+    <!-- Organic Background Elements -->
+    <div class="absolute top-20 -right-20 w-[500px] h-[500px] rounded-full border border-outline-variant/15 -z-10"></div>
+    <div class="absolute bottom-40 -left-40 w-[600px] h-[600px] bg-surface-container-low rounded-full -z-10"></div>
+    <div class="absolute top-1/2 left-1/4 w-[200px] h-[200px] border border-primary/10 rounded-full -z-10"></div>
+    <!-- Contact Content Section -->
+    <div class="max-w-7xl mx-auto px-8 md:px-12 py-20 flex flex-col md:flex-row gap-16 items-start">
+      <!-- Left Column: Editorial Statement -->
+      <div class="w-full md:w-1/2 space-y-12">
+        <div>
+          <span class="inline-block bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label text-sm font-semibold mb-6">Vamos Conversar</span>
+          <h1 class="font-headline text-7xl md:text-8xl font-extrabold tracking-tighter text-on-surface leading-[0.9] mb-8">
+            Obrigado!
+          </h1>
+          <p class="font-headline text-2xl md:text-3xl text-on-surface-variant font-medium leading-relaxed max-w-xl">
+            Obrigada por explorar meu espaço criativo.
+          </p>
+        </div>
+        <div class="pt-4"></div>
+      </div>
+      <!-- Right Column: Details & Bento Style Info -->
+      <div class="w-full md:w-1/2 grid grid-cols-1 gap-8">
+        <!-- Contact Card -->
+        <div class="bg-surface-container-low p-10 rounded-xl space-y-8 editorial-shadow">
+          <div>
+            <h3 class="font-label text-xs uppercase tracking-[0.2em] text-primary font-bold mb-6">Comunicação Direta</h3>
+            <div class="space-y-6">
+              <div class="flex items-center gap-6 group">
+                <div class="w-12 h-12 rounded-full bg-surface flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                  <span translate="no" class="material-symbols-outlined">mail</span>
+                </div>
+                <a class="font-headline text-2xl font-bold tracking-tight text-on-surface hover:text-primary transition-colors"
+                  href="mailto:pedromib@zohomail.com">
+                  pedromib@zohomail.com
+                </a>
+              </div>
+              <div class="flex items-center gap-6 group">
+                <div class="w-12 h-12 rounded-full bg-surface flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                  <span translate="no" class="material-symbols-outlined">call</span>
+                </div>
+                <span class="font-headline text-2xl font-bold tracking-tight text-on-surface">
+                  +55 (11) 91336-5795
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="pt-8 border-t border-outline-variant/20">
+            <h3 class="font-label text-xs uppercase tracking-[0.2em] text-primary font-bold mb-6">Redes Sociais</h3>
+            <div class="flex flex-wrap gap-4">
+              <a class="px-8 py-4 bg-surface rounded-full font-headline font-bold text-on-surface hover:bg-primary hover:text-white transition-all duration-300"
+                href="https://www.linkedin.com/in/pedro-mendes-souza-b91559313">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        <!-- Editorial About Card -->
+        <div class="border-t border-outline-variant/40 pt-8 space-y-5">
+          <span class="font-label text-xs uppercase tracking-[0.3em] text-primary font-bold block">Sobre meu trabalho</span>
+          <p class="font-headline text-xl md:text-2xl font-medium leading-relaxed text-on-surface tracking-tight">
+            Este portfólio reúne parte dos projetos e linguagens visuais que venho desenvolvendo. Se alguma dessas
+            frentes fizer sentido para o que você procura, vou gostar de conversar.
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- Featured Image Section -->
+    <div class="w-full max-w-7xl mx-auto px-8 md:px-12 pb-32">
+      <div class="relative w-full aspect-[21/9] rounded-lg overflow-hidden editorial-shadow group">
+        <img alt="Pedro Henrique portfolio page image"
+          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          src="/assets/page-7.png" />
+        <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex items-end p-12">
+          <div class="bg-white/70 backdrop-blur-xl p-8 rounded-lg max-w-md shadow-2xl">
+            <h4 class="font-headline text-xl font-bold mb-2">Proposta</h4>
+            <p class="text-sm text-on-surface-variant font-medium">Focado em entregar experiências digitais premium
+              através de design intencional e pensamento estratégico.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

@@ -1,0 +1,78 @@
+---
+interface Props {
+  activePage?: string;
+}
+const { activePage = '' } = Astro.props;
+
+const links = [
+  { href: '/', label: 'Lar', key: 'home' },
+  { href: '/about', label: 'Sobre', key: 'about' },
+  { href: '/notebooks-pt1', label: 'Cadernos Parte 1', key: 'notebooks-pt1' },
+  { href: '/notebooks-pt2', label: 'Cadernos Parte 2', key: 'notebooks-pt2' },
+  { href: '/illustration', label: 'Ilustração', key: 'illustration' },
+  { href: '/banners', label: 'Faixas', key: 'banners' },
+  { href: '/projetos', label: 'Novos Projetos', key: 'projetos' },
+];
+---
+
+<nav class="fixed top-0 w-full z-50 bg-[#fff4f3]/70 backdrop-blur-md shadow-[0_40px_40px_rgba(78,33,32,0.06)]">
+  <div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+    <div class="text-xl font-bold text-[#4e2120] tracking-tighter font-headline">Pedro Henrique</div>
+    <!-- Desktop Nav -->
+    <div class="hidden md:flex gap-10 font-headline text-sm tracking-tight uppercase">
+      {links.map(link => (
+        <a
+          class={activePage === link.key
+            ? 'text-[#ab2d00] border-b-2 border-[#ab2d00] pb-1 font-bold'
+            : 'text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300'}
+          href={link.href}
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+    <!-- Right Side -->
+    <div class="flex items-center gap-3">
+      {activePage === 'contact' ? (
+        <a class="text-[#ab2d00] border-b-2 border-[#ab2d00] pb-1 font-headline font-medium uppercase text-sm tracking-tight" href="/contact">Contato</a>
+      ) : (
+        <a href="/contact">
+          <button translate="no" class="material-symbols-outlined text-[#ab2d00] hover:scale-110 duration-200">mail</button>
+        </a>
+      )}
+      <button id="menu-btn" aria-label="Abrir menu" aria-expanded="false"
+        class="md:hidden flex items-center justify-center text-[#4e2120] hover:text-[#ab2d00] transition-colors duration-200">
+        <span class="material-symbols-outlined" translate="no">menu</span>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Dropdown -->
+  <div id="mobile-menu"
+    class="hidden md:hidden bg-[#fff4f3]/95 backdrop-blur-md border-t border-[#4e2120]/10 px-8 py-6 flex flex-col gap-5 font-headline text-sm tracking-tight uppercase">
+    {links.map(link => (
+      <a
+        class={activePage === link.key
+          ? 'text-[#ab2d00] border-b border-[#ab2d00]/30 pb-2 font-bold'
+          : 'text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300'}
+        href={link.href}
+      >
+        {link.label}
+      </a>
+    ))}
+    <a class={activePage === 'contact' ? 'text-[#ab2d00] border-b border-[#ab2d00]/30 pb-2 font-bold' : 'text-[#ab2d00] font-bold'} href="/contact">Contato</a>
+  </div>
+  <script>
+    (function () {
+      var btn = document.getElementById('menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      if (btn && menu) {
+        btn.addEventListener('click', function () {
+          var isOpen = !menu.classList.contains('hidden');
+          menu.classList.toggle('hidden', isOpen);
+          btn.setAttribute('aria-expanded', String(!isOpen));
+          btn.querySelector('span').textContent = isOpen ? 'menu' : 'close';
+        });
+      }
+    })();
+  </script>
+</nav>
