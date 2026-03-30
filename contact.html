@@ -105,8 +105,7 @@
 </head>
 
 <body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
-  <nav
-    class="fixed top-0 w-full z-50 bg-[#fff4f3]/70 backdrop-blur-md shadow-[0_40px_40px_rgba(78,33,32,0.06)]">
+  <nav class="fixed top-0 w-full z-50 bg-[#fff4f3]/70 backdrop-blur-md shadow-[0_40px_40px_rgba(78,33,32,0.06)]">
     <div class="flex justify-between items-center px-8 py-6 max-w-none mx-auto">
       <div class="text-2xl font-bold tracking-tighter text-[#4e2120] font-headline">Pedro Henrique</div>
       <div class="hidden md:flex gap-10 items-center font-headline font-medium tracking-tight">
@@ -137,23 +136,26 @@
       class="hidden md:hidden bg-[#fff4f3]/95 backdrop-blur-md border-t border-[#4e2120]/10 px-8 py-6 flex flex-col gap-5 font-headline text-sm tracking-tight uppercase">
       <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="index.html">Lar</a>
       <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="about.html">Sobre</a>
-      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="notebooks-pt1.html">Cadernos Parte 1</a>
-      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="notebooks-pt2.html">Cadernos Parte 2</a>
-      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="illustration.html">Ilustração</a>
+      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300"
+        href="notebooks-pt1.html">Cadernos Parte 1</a>
+      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300"
+        href="notebooks-pt2.html">Cadernos Parte 2</a>
+      <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300"
+        href="illustration.html">Ilustração</a>
       <a class="text-[#4e2120]/60 hover:text-[#ab2d00] transition-colors duration-300" href="banners.html">Faixas</a>
       <a class="text-[#ab2d00] border-b border-[#ab2d00]/30 pb-2 font-bold" href="contact.html">Contato</a>
     </div>
     <script>
-      (function() {
-        var btn = document.getElementById('menu-btn');
-        var menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', function() {
-          var isOpen = !menu.classList.contains('hidden');
-          menu.classList.toggle('hidden', isOpen);
-          btn.setAttribute('aria-expanded', String(!isOpen));
-          btn.querySelector('span').textContent = isOpen ? 'menu' : 'close';
-        });
-      })();
+        (function () {
+          var btn = document.getElementById('menu-btn');
+          var menu = document.getElementById('mobile-menu');
+          btn.addEventListener('click', function () {
+            var isOpen = !menu.classList.contains('hidden');
+            menu.classList.toggle('hidden', isOpen);
+            btn.setAttribute('aria-expanded', String(!isOpen));
+            btn.querySelector('span').textContent = isOpen ? 'menu' : 'close';
+          });
+        })();
     </script>
   </nav>
   <main class="relative pt-32 min-h-screen overflow-hidden">
@@ -223,15 +225,14 @@
             </div>
           </div>
         </div>
-        <!-- Editorial Quote Card -->
-        <div class="bg-primary p-12 rounded-xl text-white overflow-hidden relative group">
-          <div class="absolute top-0 right-0 p-8 opacity-0">
-            <span translate="no" class="material-symbols-outlined text-9xl">format_quote</span>
-          </div>
-          <p class="font-headline text-3xl font-bold leading-tight relative z-10">
-            "Desenhando com propósito, criando com paixão."
+        <!-- Editorial About Card -->
+        <div class="border-t border-outline-variant/40 pt-8 space-y-5">
+          <span class="font-label text-xs uppercase tracking-[0.3em] text-primary font-bold block">Sobre meu
+            trabalho</span>
+          <p class="font-headline text-xl md:text-2xl font-medium leading-relaxed text-on-surface tracking-tight">
+            Este portfólio reúne parte dos projetos e linguagens visuais que venho desenvolvendo. Se alguma dessas
+            frentes fizer sentido para o que você procura, vou gostar de conversar.
           </p>
-
         </div>
       </div>
     </div>
