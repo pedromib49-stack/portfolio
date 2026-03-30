@@ -143,24 +143,29 @@
     <div id="mobile-menu"
       class="hidden md:hidden bg-[#fff4f3]/95 dark:bg-[#1a0b0a]/95 backdrop-blur-md border-t border-[#4e2120]/10 px-8 py-6 flex flex-col gap-5 font-['Plus_Jakarta_Sans'] text-sm tracking-tight uppercase">
       <a class="text-[#ab2d00] border-b border-[#ab2d00]/30 pb-2 font-bold" href="index.html">Lar</a>
-      <a class="text-[#4e2120] dark:text-[#efd9d8] hover:text-[#ab2d00] transition-colors duration-300" href="about.html">Sobre</a>
-      <a class="text-[#4e2120] dark:text-[#efd9d8] hover:text-[#ab2d00] transition-colors duration-300" href="notebooks-pt1.html">Cadernos Parte 1</a>
-      <a class="text-[#4e2120] dark:text-[#efd9d8] hover:text-[#ab2d00] transition-colors duration-300" href="notebooks-pt2.html">Cadernos Parte 2</a>
-      <a class="text-[#4e2120] dark:text-[#efd9d8] hover:text-[#ab2d00] transition-colors duration-300" href="illustration.html">Ilustração</a>
-      <a class="text-[#4e2120] dark:text-[#efd9d8] hover:text-[#ab2d00] transition-colors duration-300" href="banners.html">Faixas</a>
+      <a class="text-[#4e2120] dark:text-[#efd9d8] hover:text-[#ab2d00] transition-colors duration-300"
+        href="about.html">Sobre</a>
+      <a class="text-[#4e2120] dark:text-[#efd9d8] hover:text-[#ab2d00] transition-colors duration-300"
+        href="notebooks-pt1.html">Cadernos Parte 1</a>
+      <a class="text-[#4e2120] dark:text-[#efd9d8] hover:text-[#ab2d00] transition-colors duration-300"
+        href="notebooks-pt2.html">Cadernos Parte 2</a>
+      <a class="text-[#4e2120] dark:text-[#efd9d8] hover:text-[#ab2d00] transition-colors duration-300"
+        href="illustration.html">Ilustração</a>
+      <a class="text-[#4e2120] dark:text-[#efd9d8] hover:text-[#ab2d00] transition-colors duration-300"
+        href="banners.html">Faixas</a>
       <a class="text-[#ab2d00] font-bold" href="contact.html">Contato</a>
     </div>
     <script>
-      (function() {
-        var btn = document.getElementById('menu-btn');
-        var menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', function() {
-          var isOpen = !menu.classList.contains('hidden');
-          menu.classList.toggle('hidden', isOpen);
-          btn.setAttribute('aria-expanded', String(!isOpen));
-          btn.querySelector('span').textContent = isOpen ? 'menu' : 'close';
-        });
-      })();
+        (function () {
+          var btn = document.getElementById('menu-btn');
+          var menu = document.getElementById('mobile-menu');
+          btn.addEventListener('click', function () {
+            var isOpen = !menu.classList.contains('hidden');
+            menu.classList.toggle('hidden', isOpen);
+            btn.setAttribute('aria-expanded', String(!isOpen));
+            btn.querySelector('span').textContent = isOpen ? 'menu' : 'close';
+          });
+        })();
     </script>
   </nav>
   <main class="relative min-h-screen pt-32 flex items-center overflow-hidden">
@@ -179,11 +184,13 @@
         <div class="md:col-span-5 mb-12 md:mb-0">
           <div class="space-y-6">
             <p class="font-label text-primary uppercase tracking-[0.3em] font-bold text-sm">Designer Gráfico</p>
-            <h1 class="font-headline text-4xl md:text-5xl lg:text-7xl font-bold text-on-surface tracking-tighter leading-none">Pedro
+            <h1
+              class="font-headline text-4xl md:text-5xl lg:text-7xl font-bold text-on-surface tracking-tighter leading-none">
+              Pedro
               Henrique</h1>
             <p class="font-body text-lg text-on-surface-variant max-w-md leading-relaxed mt-4">
-              Explorando a interseção do minimalismo digital e formas orgânicas. Criando experiências visuais que
-              equilibram estética ousada com clareza funcional.
+              Designer gráfico com foco em peças digitais, identidade visual e ilustração. Desenvolvo soluções visuais
+              que equilibram clareza, consistência e personalidade para comunicação de marcas e projetos.
             </p>
             <div class="flex flex-wrap gap-4 pt-4">
               <a class="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white font-bold rounded-full shadow-lg hover:shadow-primary/20 transition-all duration-300 active:scale-95 inline-block text-center"
